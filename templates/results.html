@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>IMAP_homepage</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;display=swap"
+    />
+    <link rel="stylesheet" href="static/css/animate.min.css" />
+    <link rel="stylesheet" href="static/css/Login-Form-Basic-icons.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md bg-body py-3">
+      <div class="container">
+        <img
+          data-bss-hover-animate="bounce"
+          src="static/img/leaf_img-removebg-preview.png"
+          width="65"
+          height="60"
+        /><a class="navbar-brand d-flex align-items-center" href="#">
+          <h1>
+            <strong
+              ><span
+                style="
+                  color: rgb(33, 37, 41);
+                  background-color: rgb(248, 249, 250);
+                "
+                >Disease Identifier</span
+              ></strong
+            >
+          </h1>
+          <span><br /><br /></span> </a
+        ><button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-2"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-2">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                data-bss-hover-animate="pulse"
+                href="home.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bss-hover-animate="pulse"
+                href="contact.html"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item"></li>
+          </ul>
+          <a class="btn btn-primary ms-md-2" role="button" href="home.html"
+            >Signout</a
+          >
+        </div>
+      </div>
+    </nav>
+    <header
+      class="text-center text-white masthead"
+      style="background: url('static/img/leafbg2.jpg')"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto position-relative">
+            <h1 class="mb-5">Results</h1>
+          </div>
+        </div>
+      </div>
+      <section class="position-relative py-4 py-xl-5">
+        <div class="container">
+          {% if prediction == 'Potato___Early_blight'%}
+          <div class="row">
+            <div class="col">
+              <h2>Early Blight</h2>
+              <img src="static/img/EarlyBlight.JPG" width="400" height="400" />
+            </div>
+          </div>
+          {% elif prediction == 'Potato___healthy'%}
+          <div class="row">
+            <div class="col">
+              <h2>Healthy!</h2>
+              <img src="static/img/Healthy.JPG" width="400" height="400" />
+            </div>
+          </div>
+          {% elif prediction == 'Potato___Late_blight'%}
+          <div class="row">
+            <div class="col">
+              <h2>Late Blight</h2>
+              <img src="static/img/LateBlight.JPG" width="400" height="400" />
+            </div>
+          </div>
+          {% else %}
+          <div class="row">
+            <div class="col">
+              <h2>Error Nigga</h2>
+              <img src="static/img/bg-masthead.jpg" width="400" height="400" />
+            </div>
+          </div>
+
+          {% endif %}
+        </div>
+      </section>
+    </header>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/bs-init.js"></script>
+  </body>
+</html>
