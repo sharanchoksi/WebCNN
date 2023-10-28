@@ -156,11 +156,11 @@ starlette==0.27.0
 statsmodels==0.13.5
 streamlit==1.25.0
 tenacity==8.2.3
-tensorboard==2.7.0
+tensorboard==2.8.0
 tensorboard-data-server==0.7.1
-tensorflow==2.7.0
-tensorflow-estimator==2.7.0
-tensorflow-intel==2.7.0
+tensorflow==2.8.0
+tensorflow-estimator==2.8.0
+tensorflow-intel==2.8.0
 tensorflow-io-gcs-filesystem==0.30.0
 termcolor==2.3.0
 terminado==0.17.1
