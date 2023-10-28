@@ -119,7 +119,6 @@ pydantic==2.4.2
 pydantic_core==2.10.1
 pydeck==0.8.0
 pygame==2.5.0
-pypiwin32==223; sys_platform == 'win32'
 Pygments==2.14.0
 Pympler==1.0.1
 pyparsing==3.0.9
@@ -128,8 +127,8 @@ python-dateutil==2.8.2
 python-json-logger==2.0.7
 pytz==2023.3
 pytz-deprecation-shim==0.1.0.post0
-pywin32;sys_platform == 'win32'
-pywinpty==2.0.10; sys_platform == 'win32'
+pywin32==305
+pywinpty==2.0.10
 PyYAML==6.0
 pyzmq==25.0.0
 qtconsole==5.4.2
@@ -156,14 +155,12 @@ starlette==0.27.0
 statsmodels==0.13.5
 streamlit==1.25.0
 tenacity==8.2.3
-tensorboard
-tensorboard-data-server
-tensorboard-plugin-wit
-tensorflow-estimator
-tensorflow-gpu
-tensorflow
-tensorflow-intel
-tensorflow-io-gcs-filesystem
+tensorboard==2.13.0
+tensorboard-data-server==0.7.1
+tensorflow==2.13.0
+tensorflow-estimator==2.13.0
+tensorflow-intel==2.13.0
+tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.3.0
 terminado==0.17.1
 threadpoolctl==3.1.0
