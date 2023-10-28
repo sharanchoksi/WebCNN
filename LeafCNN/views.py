@@ -37,10 +37,8 @@ def Predictor(request):
         file_name=default_storage.save(file.name,file)
         file_url=default_storage.path(file_name)
         class_names = ['Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy']
-        image = cv2.imread(file_url)
-        target_size = (256, 256)
-        resized_image = cv2.resize(image, target_size)
-        inputimg_array = np.array(resized_image)
+        img = tf.keras.preprocessing.image.load_img(file_url, target_size=(256,256))
+        inputimg_array = tf.keras.preprocessing.image.img_to_array(img)
         inputimg_array=inputimg_array/255
         print(inputimg_array.shape)
         img1=inputimg_array.reshape((1,256,256,3))
